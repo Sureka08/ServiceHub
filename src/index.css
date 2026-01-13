@@ -1,0 +1,332 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+  
+  body {
+    @apply bg-gray-50 text-gray-900;
+  }
+}
+
+@layer components {
+  .btn {
+    @apply px-4 py-2 rounded-lg font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500;
+  }
+  
+  .btn-hero {
+    @apply inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-offset-2;
+  }
+  
+  .btn-hero-primary {
+    @apply btn-hero bg-white text-primary-600 hover:bg-gray-50 focus:ring-primary-500 shadow-lg;
+  }
+  
+  .btn-hero-secondary {
+    @apply btn-hero border-2 border-white text-white hover:bg-white hover:text-primary-600 focus:ring-white;
+  }
+  
+  .btn-cta {
+    @apply inline-flex items-center justify-center px-10 py-4 text-lg font-bold rounded-2xl transition-all duration-300 transform hover:scale-105 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-offset-2;
+  }
+  
+  .btn-cta-primary {
+    @apply btn-cta bg-white text-primary-600 hover:bg-gray-50 focus:ring-primary-500 shadow-xl;
+  }
+  
+  .btn-services {
+    @apply inline-flex items-center justify-center px-8 py-4 text-lg font-semibold rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-xl focus:outline-none focus:ring-4 focus:ring-offset-2 bg-primary-600 text-white hover:bg-primary-700 focus:ring-primary-500 shadow-lg;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-gray-200 text-gray-700 hover:bg-gray-300 focus:ring-gray-500;
+  }
+  
+  .btn-accent {
+    @apply btn bg-accent-600 text-white hover:bg-accent-700 focus:ring-accent-500;
+  }
+  
+  .btn-outline {
+    @apply btn border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white;
+  }
+  
+  .btn-danger {
+    @apply btn bg-red-600 text-white hover:bg-red-700 focus:ring-red-500;
+  }
+  
+  .btn-sm {
+    @apply px-3 py-1.5 text-sm;
+  }
+  
+  .input {
+    @apply w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+  }
+  
+  .card {
+    @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6;
+  }
+  
+  .card-hover {
+    @apply card hover:shadow-md transition-shadow duration-200;
+  }
+  
+  .form-group {
+    @apply space-y-2;
+  }
+  
+  .form-label {
+    @apply block text-sm font-medium text-gray-700;
+  }
+  
+  .form-error {
+    @apply text-sm text-red-600;
+  }
+  
+  .badge {
+    @apply inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium;
+  }
+  
+  .badge-success {
+    @apply badge bg-green-100 text-green-800;
+  }
+  
+  .badge-warning {
+    @apply badge bg-yellow-100 text-yellow-800;
+  }
+  
+  .badge-error {
+    @apply badge bg-red-100 text-red-800;
+  }
+  
+  .badge-info {
+    @apply badge bg-blue-100 text-blue-800;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent;
+  }
+  
+  .shadow-soft {
+    box-shadow: 0 2px 15px -3px rgba(0, 0, 0, 0.07), 0 10px 20px -2px rgba(0, 0, 0, 0.04);
+  }
+  
+  .backdrop-blur {
+    backdrop-filter: blur(10px);
+  }
+}
+
+/* Custom CSS classes */
+.card {
+  @apply bg-white rounded-lg shadow-md p-6 border border-gray-200;
+}
+
+.card-hover {
+  @apply bg-white rounded-lg shadow-md p-6 border border-gray-200 hover:shadow-lg transition-shadow duration-200;
+}
+
+.btn-primary {
+  @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-2 px-4 rounded-md transition-colors duration-200;
+}
+
+.btn-secondary {
+  @apply bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded-md transition-colors duration-200;
+}
+
+.input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+}
+
+.form-group {
+  @apply mb-4;
+}
+
+.form-label {
+  @apply text-sm font-medium text-gray-700 mb-2 flex items-center;
+}
+
+.form-error {
+  @apply text-red-600 text-sm mt-1;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Status badges */
+.status-pending {
+  @apply bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-accepted {
+  @apply bg-blue-100 text-blue-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-in_progress {
+  @apply bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-completed {
+  @apply bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-cancelled {
+  @apply bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.status-rejected {
+  @apply bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+/* Urgency badges */
+.urgency-normal {
+  @apply bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.urgency-medium {
+  @apply bg-orange-100 text-orange-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.urgency-high {
+  @apply bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+/* Form elements */
+.form-input {
+  @apply w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent;
+}
+
+.form-checkbox {
+  @apply h-4 w-4 text-primary-600 focus:ring-primary-500 border-gray-300 rounded;
+}
+
+.btn-icon {
+  @apply p-2 rounded-md transition-colors duration-200;
+}
+
+.btn-icon:hover {
+  @apply bg-gray-100;
+}
+
+.btn-danger.btn-icon:hover {
+  @apply bg-red-100;
+}
+
+.btn-secondary.btn-icon:hover {
+  @apply bg-gray-200;
+}
+
+/* Modal improvements */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 overflow-y-auto;
+}
+
+.modal-content {
+  @apply bg-white rounded-lg shadow-xl max-w-2xl w-full max-h-[95vh] overflow-y-auto relative my-8;
+}
+
+/* Ensure form elements are properly styled */
+.form-input:focus {
+  @apply ring-2 ring-primary-500 border-transparent;
+}
+
+/* Better responsive design for modals */
+@media (max-width: 640px) {
+  .modal-content {
+    @apply max-w-full mx-2 my-4;
+  }
+}
+
+/* Custom scrollbar for form */
+.form-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.form-scroll::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.form-scroll::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.form-scroll::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* Enhanced Button Animations */
+.btn-hero, .btn-cta, .btn-services {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-hero::before, .btn-cta::before, .btn-services::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
+}
+
+.btn-hero:hover::before, .btn-cta:hover::before, .btn-services:hover::before {
+  left: 100%;
+}
+
+/* Pulse animation for CTA buttons */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 30px rgba(59, 130, 246, 0.6);
+  }
+}
+
+.btn-cta-primary {
+  animation: pulse-glow 2s infinite;
+}
+
+/* Gradient text effect for hero buttons */
+.btn-hero-primary {
+  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-hero-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Enhanced shadow effects */
+.btn-hero:hover, .btn-cta:hover, .btn-services:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+  .btn-hero, .btn-cta, .btn-services {
+    @apply px-6 py-3 text-base;
+  }
+  
+  .btn-cta {
+    @apply px-8 py-3;
+  }
+}
